@@ -3,11 +3,7 @@
 /**
  * Module dependencies.
  */
-const filePath = './customer_data.txt',
-  lineReader = require('readline').createInterface({
-    input: require('fs').createReadStream(filePath)
-  }),
-  constants = require('./constants'),
+const constants = require('./constants'),
   usersToInvite = [];
 
 /**
@@ -15,7 +11,10 @@ const filePath = './customer_data.txt',
  * 
  * Fetch users from a file who are at a distance within 100km and sort by their user_id.
  */
-const fetchUser = () => {
+exports.fetchUser = (filePath) => {
+  const lineReader = require('readline').createInterface({
+    input: require('fs').createReadStream(filePath)
+  });
   lineReader.on('line', (line) => {
     line = JSON.parse(line);
     filterUsers(line);
@@ -80,5 +79,3 @@ const calculateDistance = (userLat, userLon) => {
 const sortUsers = () => {
   usersToInvite.sort((a, b) => (a.user_id > b.user_id) ? 1 : ((b.user_id > a.user_id) ? -1 : 0));
 }
-
-fetchUser();
