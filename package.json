@@ -1,0 +1,22 @@
+{
+  "name": "nikhil-distance",
+  "version": "1.0.0",
+  "description": "Fetch users from a file who are at a distance within 100km and sort by their user_id.",
+  "main": "coding_challenge.js",
+  "scripts": {
+    "test": "node coding_challenge.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikhilsharma110994/calculate_distance.git"
+  },
+  "keywords": [
+    "nikhil"
+  ],
+  "author": "Nikhil Sharma",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nikhilsharma110994/calculate_distance/issues"
+  },
+  "homepage": "https://github.com/nikhilsharma110994/calculate_distance#readme"
+}
